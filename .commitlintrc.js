@@ -1,4 +1,5 @@
 /**
+ * init: 初始化
  * add：新功能
  * update：更新某功能
  * fix：修补某功能的bug
@@ -10,29 +11,30 @@
  * restructure: 重构代码
  */
 module.exports = {
-  extends: ["@commitlint/config-conventional"],
+  extends: ['@commitlint/config-conventional'],
   rules: {
-    "type-enum": [
+    'type-enum': [
       2,
-      "always",
+      'always',
       [
-        "add",
-        "update",
-        "fix",
-        "refactor",
-        "optimize",
-        "style",
-        "docs",
-        "chore",
-        "restructure",
-      ],
+        'init',
+        'add',
+        'update',
+        'fix',
+        'refactor',
+        'optimize',
+        'style',
+        'docs',
+        'chore',
+        'restructure'
+      ]
     ],
-    "type-case": [0],
-    "type-empty": [0],
-    "scope-empty": [0],
-    "scope-case": [0],
-    "subject-full-stop": [0, "never"],
-    "subject-case": [0, "never"],
-    "header-max-length": [0, "always", 72],
-  },
-};
+    'type-case': [0],
+    'type-empty': [0],
+    'scope-empty': [0],
+    'scope-case': [0],
+    'subject-full-stop': [0, 'never'],
+    'subject-case': [0, 'never'],
+    'header-max-length': [0, 'always', 72]
+  }
+}
