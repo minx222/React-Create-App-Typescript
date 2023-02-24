@@ -1,5 +1,5 @@
 import { add } from '@/stores/modules/user'
-import { Button } from 'antd';
+import { Button } from 'antd'
 import { useDispatch } from 'react-redux'
 
 const Home: React.FC = () => {
@@ -10,9 +10,11 @@ const Home: React.FC = () => {
   }
   return (
     <div>
-        <Button type="primary" onClick={clickHandler}>Primary Button</Button>
+      <Button type="primary" onClick={clickHandler}>
+        Primary Button
+      </Button>
     </div>
   )
 }
 
-export default Home  
+export default Home
