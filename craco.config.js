@@ -13,7 +13,7 @@ module.exports = {
     plugins: [
       AutoImport({
         imports: ["react", "react-router-dom"],
-        dirs: ["./src/api/**", "./src/components/**"],
+        dirs: ["./src/api/**"],
         dts: "./types/global/typesImport.d.ts",
       }),
     ],
