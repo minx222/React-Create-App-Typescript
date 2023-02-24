@@ -24,6 +24,8 @@ module.exports = {
         // require使用报错
         '@typescript-eslint/no-var-requires': 0,
         // 依赖自动注入React环境报错
-        "react/react-in-jsx-scope": 0
+        "react/react-in-jsx-scope": 0,
+        // any 类型
+        "@typescript-eslint/no-explicit-any": 0
     }
 }
