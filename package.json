@@ -1,0 +1,56 @@
+{
+  "name": "react-ts-template",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@craco/craco": "^7.0.0",
+    "@reduxjs/toolkit": "^1.9.2",
+    "antd": "^4.24.7",
+    "axios": "^1.2.6",
+    "qs": "^6.11.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "6",
+    "react-scripts": "5.0.1",
+    "redux": "^4.2.1",
+    "typescript": "^4.4.2"
+  },
+  "scripts": {
+    "dev": "craco start",
+    "build": "craco build",
+    "test": "craco test"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/qs": "^6.9.7",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "autoprefixer": "^9.8.8",
+    "craco-less": "^2.0.0",
+    "eslint": "^8.34.0",
+    "eslint-plugin-react": "^7.32.2",
+    "http-proxy-middleware": "^2.0.6",
+    "postcss": "^8.4.4",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
+    "unplugin-auto-import": "^0.13.0"
+  }
+}
