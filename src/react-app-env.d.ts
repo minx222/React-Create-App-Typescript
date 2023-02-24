@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 /// <reference types="node" />
-/// <reference types="react" />
 /// <reference types="react-dom" />
 
 declare namespace NodeJS {
@@ -70,6 +68,3 @@ declare module '*.module.sass' {
   const classes: { readonly [key: string]: string };
   export default classes;
 }
-=======
-/// <reference types="react-scripts" />
->>>>>>> 4a7b81305d2cc1585d8cb16488b48df677ad39c5
