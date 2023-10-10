@@ -1,10 +1,11 @@
-import { Provider } from 'react-redux'
-import stores from '@/stores'
-import AppRouter from '@/routers'
+import { Provider } from 'react-redux';
+
+import AppRouter from '@/routers';
+import stores from '@/stores';
 const App: React.FC = () => (
   <Provider store={stores}>
     <AppRouter />
   </Provider>
-)
+);
 
-export default App
+export default App;

@@ -1,15 +1,16 @@
-import axios from "axios";
-import { ResultEnum, RequestMethodEnum } from "@/enums/request";
+import { message } from 'antd';
+import axios from 'axios';
 import type {
   InternalAxiosRequestConfig,
   AxiosInstance,
   AxiosResponse,
-  AxiosError,
-} from "axios";
-import qs from "qs";
-import type { CreateAxiosOptions } from "@/config/reques";
-import { config } from "@/config/reques";
-import { message } from "antd";
+  AxiosError
+} from 'axios';
+import qs from 'qs';
+
+import type { CreateAxiosOptions } from '@/config/reques';
+import { config } from '@/config/reques';
+import { ResultEnum, RequestMethodEnum } from '@/enums/request';
 
 export class AxiosService {
   private axiosInstance: AxiosInstance;
@@ -37,7 +38,7 @@ export class AxiosService {
     this.axiosInstance.interceptors.response.use((response: AxiosResponse) => {
       const { data, status } = response;
       if (status !== ResultEnum.SUCCESS) {
-        message.error("请求失败！ 失败信息：", data.msg);
+        message.error('请求失败！ 失败信息：', data.msg);
         Promise.reject(data);
       }
       return data;
@@ -47,14 +48,14 @@ export class AxiosService {
   get<T>(url: string, params?: object): Promise<ResultData<T>> {
     return this.axiosInstance({
       url: url + qs.stringify(params),
-      method: RequestMethodEnum.GET,
+      method: RequestMethodEnum.GET
     });
   }
   post<T>(url: string, data: any): Promise<ResultData<T>> {
     return this.axiosInstance({
       url: url,
       method: RequestMethodEnum.POST,
-      data,
+      data
     });
   }
 }

@@ -1,21 +1,25 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    node: true
-  },
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended'
+  env: { browser: true, es2020: true, node: true },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+		"plugin:@typescript-eslint/recommended",
+    'plugin:prettier/recommended'
   ],
-  overrides: [],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module'
+  "parserOptions": {
+    "ecmaFeatures": {
+        "jsx": true
+    },
+    "ecmaVersion": 13,
+    "sourceType": "module"
   },
-  plugins: ['react', '@typescript-eslint'],
+  "plugins": [
+    'import',
+    "react",
+    "react-hooks",
+    "@typescript-eslint"
+  ],
   rules: {
     // require使用报错
     '@typescript-eslint/no-var-requires': 0,
@@ -23,15 +27,16 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     // any 类型
     '@typescript-eslint/no-explicit-any': 0,
+    'no-unused-vars': 'off',
     // 定义未使用
     'no-unused-vars': [
-      'error',
+      0,
       {
         argsIgnorePattern: '^_',
         varsIgnorePattern: '^_'
       }
     ],
-
+    'jsx-no-undef': 0,
     // 关闭名称校验
     'vue/multi-word-component-names': 'off',
     //允许使用any类型
@@ -44,6 +49,37 @@ module.exports = {
     'no-sparse-arrays': 2, //禁止稀疏数组， [1,,2]
     'no-var': 0, //禁用var，用let和const代替
     semi: 0, //语句强制分号结尾
-    strict: 2 //使用严格模式
+    strict: 2, //使用严格模式
+     //  配置import模块进行分组
+     'import/order': [
+      'error',
+      {
+        groups: [
+          ['builtin', 'external'],
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+        ],
+        'newlines-between': 'always',
+        pathGroups: [
+          {
+            pattern: '../**',
+            group: 'parent',
+            position: 'after',
+          },
+          {
+            pattern: './*.scss',
+            group: 'sibling',
+            position: 'after',
+          },
+        ],
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+      },
+    ],
+    'react-hooks/rules-of-hooks': 0
   }
-}
+};

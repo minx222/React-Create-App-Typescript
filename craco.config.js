@@ -2,20 +2,17 @@ const path = require('path')
 const resolve = (dir) => path.resolve(__dirname, dir)
 
 const cracoLess = require('craco-less')
-const AutoImport = require('unplugin-auto-import/webpack')
+const WebpackBar = require('webpackbar')
 
 module.exports = {
   webpack: {
     alias: {
       '@': resolve('src'),
-      components: resolve('src/components')
+      '@pages': resolve('src/pages'),
+      '@components': resolve('src/components')
     },
     plugins: [
-      AutoImport({
-        imports: ['react', 'react-router-dom'],
-        dirs: ['./src/api/**'],
-        dts: './types/global/typesImport.d.ts'
-      })
+      new WebpackBar()
     ]
   },
   style: {
@@ -27,5 +24,13 @@ module.exports = {
     {
       plugin: cracoLess
     }
-  ]
+  ],
+  devServer: {
+    port: 4000,
+    headers: {
+      // 允许跨域
+      'Access-Control-Allow-Origin': '*',
+    },
+    open: false,
+  }
 }

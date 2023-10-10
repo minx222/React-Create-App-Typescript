@@ -1,14 +1,21 @@
-import { HashRouter, useRoutes } from 'react-router-dom'
-import { BaseRouters } from './modules/base'
-const routerList: AppRouteRaw[] = []
-routerList.push(BaseRouters)
+import { HashRouter } from 'react-router-dom';
 
-const WrapperRoutes = () => useRoutes(routerList)
+import { createRouter } from './createdRouter';
+import { BaseRouters } from './modules/base';
+
+const routerList: AppRouteRaw[] = [];
+routerList.push(...BaseRouters);
+
+const WrapperRoutes = () =>
+  createRouter({
+    routerArr: routerList,
+    beforeEach: () => {}
+  });
 const AppRouter = () => {
   return (
     <HashRouter>
       <WrapperRoutes />
     </HashRouter>
-  )
-}
-export default AppRouter
+  );
+};
+export default AppRouter;

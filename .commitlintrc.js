@@ -17,7 +17,7 @@ module.exports = {
       2,
       'always',
       [
-        'init',
+        'feat',
         'add',
         'update',
         'fix',
