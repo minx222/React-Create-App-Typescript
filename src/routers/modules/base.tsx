@@ -1,8 +1,8 @@
-import NOtFound from '@pages/404';
-import Home from '@pages/home';
-import LoginPage from '@pages/login';
+import NOtFound from '@pages/404'
+import Home from '@pages/home'
+import LoginPage from '@pages/login'
 
-import Layout from '@/layout/Layout';
+import Layout from '@/layout/Layout'
 
 export const BaseRouters: AppRouteRaw[] = [
 	{
@@ -11,20 +11,20 @@ export const BaseRouters: AppRouteRaw[] = [
 		children: [
 			{
 				path: 'home',
-				element: <Home />
-			}
-		]
+				element: <Home />,
+			},
+		],
 	},
 	{
 		path: '/login',
-		element: <LoginPage />
+		element: <LoginPage />,
 	},
 	{
 		path: '*',
-		redirect: true
+		redirect: true,
 	},
 	{
 		path: '/404',
-		element: NOtFound
-	}
-];
+		element: NOtFound,
+	},
+]

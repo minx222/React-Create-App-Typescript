@@ -1,8 +1,8 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
-import { BaseRouters } from './modules/base';
+import { BaseRouters } from './modules/base'
 
-const routerList: AppRouteRaw[] = [];
-routerList.push(...BaseRouters);
-const AppRouter = () => <RouterProvider router={createBrowserRouter([...BaseRouters])}></RouterProvider>;
-export default AppRouter;
+const routerList: AppRouteRaw[] = []
+routerList.push(...BaseRouters)
+const AppRouter = () => <RouterProvider router={createBrowserRouter([...BaseRouters])}></RouterProvider>
+export default AppRouter

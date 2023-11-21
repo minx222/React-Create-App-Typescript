@@ -18,7 +18,8 @@ module.exports = {
     'import',
     "react",
     "react-hooks",
-    "@typescript-eslint"
+    "@typescript-eslint",
+		'prettier'
   ],
   rules: {
     // require使用报错
@@ -48,38 +49,8 @@ module.exports = {
     'no-constant-condition': 2, //禁止在条件中使用常量表达式 if(true) if(1)
     'no-sparse-arrays': 2, //禁止稀疏数组， [1,,2]
     'no-var': 0, //禁用var，用let和const代替
-    semi: 0, //语句强制分号结尾
     strict: 2, //使用严格模式
-     //  配置import模块进行分组
-     'import/order': [
-      'error',
-      {
-        groups: [
-          ['builtin', 'external'],
-          'internal',
-          'parent',
-          'sibling',
-          'index',
-        ],
-        'newlines-between': 'always',
-        pathGroups: [
-          {
-            pattern: '../**',
-            group: 'parent',
-            position: 'after',
-          },
-          {
-            pattern: './*.scss',
-            group: 'sibling',
-            position: 'after',
-          },
-        ],
-        alphabetize: {
-          order: 'asc',
-          caseInsensitive: true,
-        },
-      },
-    ],
-    'react-hooks/rules-of-hooks': 0
+    'react-hooks/rules-of-hooks': 0,
+		"prettier/prettier": "error"
   }
 };
