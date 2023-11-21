@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
+    "@ant-design/pro-components": "^2.6.42",
     "@craco/craco": "^7.0.0",
     "@reduxjs/toolkit": "^1.9.2",
-    "antd": "^4.24.7",
+		"ahooks": "^3.7.8",
+		"antd": "^5.10.1",
     "axios": "^1.2.6",
     "qs": "^6.11.0",
     "react": "^18.2.0",
